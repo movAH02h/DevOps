@@ -1,7 +1,8 @@
 from binary_search import search
 
-array = [1, 2, 3, 4, 5, 6, 7, 8, 10, -1, -100, -99, 200, 33]
-targets = [1000, 3, 5, 11, -100]
+array = [-100, -99, -1, 1, 2, 3, 4, 5, 6, 7, 8, 10, 33, 200]
+
+targets = [2, 3, 5, 1, -100]
 
 def test_first():
     assert search(array, 0, len(array) - 1, targets[0]) == targets[0]
