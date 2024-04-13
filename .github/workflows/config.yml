@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Five tests for binary search using -PYTEST-
       run: |
-        pytest ./tests/search_test/test_functions.py
+        pytest ./tests/search_test/test_search.py
     - name: Tests for MY PROJECT using -PYTEST-
       run: |
         pytest ./tests/project_test/test_project.py
