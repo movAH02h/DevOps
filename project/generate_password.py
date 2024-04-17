@@ -20,6 +20,7 @@ def hash_password(password):
     return hashed_password
 
 
+
 def generate():
     # Generate a new password
     new_password = generate_password()
