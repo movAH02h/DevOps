@@ -20,12 +20,9 @@ def hash_password(password):
     return hashed_password
 
 
-
 def generate():
     # Generate a new password
     new_password = generate_password()
     hashed_password = hash_password(new_password)
 
     return new_password, hashed_password
-
-print(generate_password(10))

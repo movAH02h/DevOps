@@ -1,6 +1,7 @@
 from search.binary_search import bin_search, array
 import pytest
 
+
 @pytest.mark.parametrize("array, target, result", [(array, 1, 1),
                                           (array, -100, -100),
                                           (array, 1000, -1),

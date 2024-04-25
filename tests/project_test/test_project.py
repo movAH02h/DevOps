@@ -40,10 +40,10 @@ def test_store(service, username, password, result):
 def test_retrieve(service, username, result):
     assert retrieve_password(service, username) == result
 
-# Проверка на то, что в пароле обязательно должна быть хотя бы одна цифра
+# Исправить. Сделать, чтобы в проекте была хотя бы одна цифра
 def test_generation_of_password(get_password):
     flag_digits_letters = get_password.isalnum()
-    # Должны быть не только цифры или буквы
+
     assert False == flag_digits_letters
 
 # Проверка на длину хэша
