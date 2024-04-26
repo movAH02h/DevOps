@@ -42,4 +42,4 @@ jobs:
         pytest ./tests/project_test/test_project.py
     - name: Run Pylint
       run: |
-        pylint *.py
+        pylint project/*.py
