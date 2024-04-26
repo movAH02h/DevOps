@@ -40,6 +40,6 @@ jobs:
     - name: Tests for MY PROJECT using -PYTEST-
       run: |
         pytest ./tests/project_test/test_project.py
-    - name: Pylint check module-docstring in modules ( files )
+    - name: Run Pylint
       run: |
-        pylint project/
+        pylint *.py
