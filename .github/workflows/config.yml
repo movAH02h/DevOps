@@ -42,7 +42,7 @@ jobs:
         pytest ./tests/project_test/test_project.py
     - name: Pylint project
       run: |
-        pylint project
+        pylint project/
     - name: Pylint search
       run: |
-        pylint search
+        pylint search/
