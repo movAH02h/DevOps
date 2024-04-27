@@ -40,6 +40,7 @@ jobs:
     - name: Tests for MY PROJECT using -PYTEST-
       run: |
         pytest ./tests/project_test/test_project.py
-    - name: Run Pylint
+    - name: Run Pylint with pylintrc configuration
       run: |
-        pylint project/*.py
+        pylint --rcfile=pylintrc project/*.py search/*.py
+
