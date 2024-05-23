@@ -1,0 +1,32 @@
+name: check program
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Five tests for binary search using -PYTEST-
+      run: |
+        pytest ./tests/search_test/test_search.py
+    - name: Tests for MY PROJECT using -PYTEST-
+      run: |
+        pytest ./tests/project_test/test_project.py
+    - name: Run Pylint with pylintrc configuration
+      run: |
+        pylint --rcfile=pylintrc project/*.py search/*.py
